@@ -42,3 +42,53 @@ fs.rename(
     console.log('File renamed...');
   }
 );
+
+
+
+
+
+
+// WRITE THE FOLLOWING USERS NAME IN  A FILE  AND THEN DISPLAY THEM 
+const users = [
+  {name: "Kaddy"}, 
+  {name: "Marc"},
+  {name: "Prince"},
+  {name: "Kally"}
+]
+
+// create folder
+fs.mkdir(path.join(__dirname, "/data"), {}, err => {
+  if (err) throw err;
+
+  console.log("Folder created ...");
+
+  // create file and write json data
+  fs.writeFile(path.join(__dirname, "/data", "name.json"), JSON.stringify(users), err => {
+    if (err) throw err;
+
+    console.log("File created and data written ...")
+
+    //read file
+    fs.readFile(path.join(__dirname, "/data", "name.json"), "utf8", (err, users) => {
+      if (err) throw err;
+
+      // display user name
+      JSON.parse(users).forEach(user => {
+        console.log(user.name);
+      });
+
+      // display successful message 
+      console.log("Users name displayed ...")
+
+
+      // rename the file 
+      fs.rename(path.join(__dirname, "/data", "name.json"), path.join(__dirname, "/data", "users.json"), err => {
+        if (err) throw err;
+
+        // display successful message
+        console.log("File rename completed ...");
+      });
+
+    });
+  });
+})
