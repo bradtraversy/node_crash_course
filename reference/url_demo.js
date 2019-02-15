@@ -1,4 +1,8 @@
 const url = require('url');
+// const URL = require('url').URL;
+/* NOTE: if you are using v6 (LTS), line 1 gives errors,
+*  if you get an error saying, TypeError: URL is not a constructor, 
+*  comment line 1, and uncomment line 2 */
 
 const myUrl = new URL('http://mywebsite.com/hello.html?id=100&status=active');
 
