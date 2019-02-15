@@ -97,8 +97,8 @@ fs.mkdir(path.join(__dirname, "/data"), {}, err => {
 
 
 // delete a folder
-// NOTE : you must create a file named "myFolderToDelete".
-// NOTE : myFolderToDelete must an empty folder.
+// NOTE : you must create a folder named "myFolderToDelete".
+// NOTE : myFolderToDelete must be an empty folder.
 fs.rmdir(path.join(__dirname, "/myFolderToDelete"), (err) => {
   if (err) throw err;
 
