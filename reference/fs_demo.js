@@ -48,12 +48,12 @@ fs.rename(
 
 
 
-// WRITE THE FOLLOWING USERS NAME IN  A FILE  AND THEN DISPLAY THEM 
+// WRITE THE FOLLOWING USERS NAME IN  A FILE  AND THEN DISPLAY THEM
 const users = [
-  {name: "Kaddy"}, 
-  {name: "Marc"},
-  {name: "Prince"},
-  {name: "Kally"}
+  { name: "Kaddy" },
+  { name: "Marc" },
+  { name: "Prince" },
+  { name: "Kally" }
 ]
 
 // create folder
@@ -77,11 +77,11 @@ fs.mkdir(path.join(__dirname, "/data"), {}, err => {
         console.log(user.name);
       });
 
-      // display successful message 
+      // display successful message
       console.log("Users name displayed ...")
 
 
-      // rename the file 
+      // rename the file
       fs.rename(path.join(__dirname, "/data", "name.json"), path.join(__dirname, "/data", "users.json"), err => {
         if (err) throw err;
 
@@ -92,3 +92,18 @@ fs.mkdir(path.join(__dirname, "/data"), {}, err => {
     });
   });
 })
+
+
+
+
+// delete a folder
+// NOTE : you must create a folder named "myFolderToDelete".
+// NOTE : myFolderToDelete must be an empty folder.
+fs.rmdir(path.join(__dirname, "/myFolderToDelete"), (err) => {
+  if (err) throw err;
+
+  console.log("Folder deleted ...");
+});
+
+
+
