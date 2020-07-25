@@ -20,3 +20,7 @@ console.log(os.homedir());
 
 // Uptime
 console.log(os.uptime());
+
+// Tell Os Type
+// Windows Or Linux Or Mac
+console.log(os.type());
