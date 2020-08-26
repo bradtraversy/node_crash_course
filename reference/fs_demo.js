@@ -44,6 +44,12 @@ fs.rename(
 );
 
 
+// Delete File fs.unlink method is used to delete file 
+fs.unlink(path.join(__dirname,'/test','hello.txt'),err=>{
+    if(err) throw err
+    console.log('File Deleted....')
+})
+
 
 
 
