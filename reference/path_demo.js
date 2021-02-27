@@ -43,3 +43,7 @@ console.log(pathformat);
 const parentDir = path.dirname(__dirname);
 
 console.log(parentDir);
+
+// Get relative path
+// path.relative() method returns the relative path from from to to based on the current working directory
+console.log(path.relative('/reference/path_demo.js', '/reference/stream_demo/pipe_demo.js'));
