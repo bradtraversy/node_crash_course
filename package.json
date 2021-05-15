@@ -7,7 +7,7 @@
     "start": "node index",
     "dev": "nodemon index"
   },
-  "author": "Brad Traversy",
+  "author": "shashank rai",
   "license": "ISC",
   "dependencies": {
     "uuid": "^3.3.2"
