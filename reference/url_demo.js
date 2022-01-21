@@ -1,16 +1,16 @@
-const url = require('url');
+const url = require("url");
 // const URL = require('url').URL;
 /* NOTE: if you are using v6 (LTS), line 1 gives errors,
-*  if you get an error saying, TypeError: URL is not a constructor, 
-*  comment line 1, and uncomment line 2 */
+ *  if you get an error saying, TypeError: URL is not a constructor,
+ *  comment line 1, and uncomment line 2 */
 
-const myUrl = new URL('http://mywebsite.com/hello.html?id=100&status=active');
+const myUrl = new URL("http://mywebsite.com/hello.html?id=100&status=active");
 
 // Serialized URL
 console.log(myUrl.href);
 console.log(myUrl.toString());
 
-// Host (root domain)
+// Host (root domain with port if any)
 console.log(myUrl.host);
 
 // Hostname (does not get port)
@@ -26,7 +26,7 @@ console.log(myUrl.search);
 console.log(myUrl.searchParams);
 
 // Add param
-myUrl.searchParams.append('abc', '123');
+myUrl.searchParams.append("abc", "123");
 console.log(myUrl.searchParams);
 
 // Loop through params
