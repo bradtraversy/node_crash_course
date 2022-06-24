@@ -118,3 +118,36 @@ fs.copyFile('source.txt', 'destination.txt', err => {
   if (err) throw err;
   console.log('File copied...')
 })
+
+// Delete a folder
+// first, check the existence of the folder
+// if it doesnt exist, create it, otherwise delete it
+// create a folder "myRepo"
+if (!fs.existsSync) {
+    fs.mkdir(path.join(__dirname, '/myRepo'), {}, err => {
+        if (err) throw err
+        console.log('folder created successfully..')
+    })    
+}else{
+    fs.rmdir(path.join(__dirname, "/myRepo"), err =>{
+        if (err) throw err
+        console.log("folder deleted...")
+    })
+}
+
+// Delete a file
+// first, create an index.txt file in the test folder
+// then you can check for the file existence and remove it if it exists
+if (!fs.existsSync) {
+    fs.writeFile(path.join(__dirname, '/test', 'index.txt'), {}, err => {
+        if (err) throw err
+        console.log('file created successfully..')
+    })    
+}else{
+    fs.unlink(path.join(__dirname, "/test", "index.txt"), err => {
+        if (err) throw err
+        console.log("file deleted..")
+    })  
+}
+
+
