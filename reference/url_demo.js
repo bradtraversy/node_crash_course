@@ -6,6 +6,9 @@ const url = require('url');
 
 const myUrl = new URL('http://mywebsite.com/hello.html?id=100&status=active');
 
+// let's instantiate an indexUrl object
+const indexUrl = new URL("https://example:123@gmail.com#foo")
+
 // Serialized URL
 console.log(myUrl.href);
 console.log(myUrl.toString());
@@ -31,3 +34,38 @@ console.log(myUrl.searchParams);
 
 // Loop through params
 myUrl.searchParams.forEach((value, name) => console.log(`${name}: ${value}`));
+
+// get the password of the url
+console.log(indexUrl.password)
+
+// to set the password portion of the url
+indexUrl.password = "abc"
+console.log(indexUrl.href)
+
+// get the fragment portion of the url
+console.log(indexUrl.hash)
+
+// set the fragment portion of the url
+indexUrl.hash = "bar"
+console.log(indexUrl.href)
+
+// to get the serialised url origin
+console.log(indexUrl.origin)
+
+// to set the pathname of the url
+indexUrl.pathname = "fr"
+console.log(indexUrl.href)
+
+// get the url protocol
+console.log(indexUrl.protocol)
+
+// to set url protocol
+indexUrl.protocol = "ftp"
+console.log(indexUrl.href)
+
+// to get the username portion
+console.log(indexUrl.username)
+
+// to set the username portion
+indexUrl.username = "sample"
+console.log(indexUrl.href)
