@@ -1,4 +1,4 @@
-// Module Wrapper Function
+// Module Wrapper function
 // (function (exports, require, module, __filename, __dirname) {
 
 // })
@@ -12,7 +12,7 @@ class Person {
   }
 
   greeting() {
-    console.log(`My name is ${this.name} and I am ${this.age}`);
+    console.log(`My name is ${this.name} and I am ${this.age} years old.`);
   }
 }
 
